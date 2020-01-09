@@ -1,0 +1,34 @@
+.filter-options {
+  width: 100%;
+  min-height: 15vh;
+  background-color: $primary-color;
+  text-align: center;
+  padding: 2rem;
+
+  &__heading {
+    color: white;
+    font-size: 2.9rem;
+    font-weight: normal;
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+  &__label {
+    color: #fff;
+  }
+  &__select {
+    background-color: white;
+    border: 1px solid #fff;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    height: 35px;
+    letter-spacing: 0;
+    margin: 10px 0;
+    padding: 0 1rem;
+    width: 20rem;
+    display: block;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+  }
+}

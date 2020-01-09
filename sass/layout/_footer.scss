@@ -1,9 +1,16 @@
 .footer {
-    background-color: #444;
-    color: #aaa;
-    font-size: 8pt;
-    letter-spacing: 1px;
-    padding: 25px;
-    text-align: center;
-    text-transform: uppercase;
+  background-color: $primary-color;
+  color: #fff;
+  padding: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__link {
+    color: $secondary-color;
+    font-weight: 600;
+    color: $secondary-color;
+
+  }
+
+  
 }

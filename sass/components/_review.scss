@@ -1,0 +1,79 @@
+.restaurant {
+  padding: 3rem 0;
+  text-align: center;
+  &__name {
+    font-weight: 600;
+  }
+  &-img {
+    width: 50%;
+    display: inline-block;
+    margin: 3rem 0;
+  }
+
+  &__table {
+    // box-shadow: 0.5rem 0.7rem 2rem rgba($primary-color-light, 0.5);
+    border-top: 0.2rem solid $secondary-color;
+    padding-top: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    @include respond(tablet-l) {
+      width: 90%;
+    }
+  }
+}
+
+.review-section {
+  border-top: 0.2rem solid $secondary-color;
+  padding-top: 2rem;
+  text-align: left;
+  width: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 3rem;
+  min-height: 70vh;
+  @include respond(tablet-l) {
+    width: 100%;
+    h2 {
+      padding-left: 4rem;
+    }
+  }
+}
+.reviews-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .review {
+    box-shadow: 0.5rem 0.7rem 2rem rgba($primary-color-light, 0.2);
+    margin-top: 4rem;
+    padding: 2rem;
+    border-radius: 2rem;
+
+    & > * {
+      margin-bottom: 1rem;
+    }
+
+    &__author {
+      font-weight: 600;
+    }
+    &__date {
+    }
+    &__rating {
+      background-color: $primary-color;
+      color: $secondary-color;
+      display: inline-block;
+      border-radius: 1rem;
+      padding: 0.4rem 0.6rem;
+    }
+    @include respond(tablet-l) {
+      width: 60%;
+    }
+  }
+  @include respond(tablet-l) {
+    width: 100%;
+  }
+}

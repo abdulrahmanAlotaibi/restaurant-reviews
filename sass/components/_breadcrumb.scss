@@ -1,0 +1,29 @@
+.skip {
+  text-align: center;
+  color: $primary-color;
+  background-color: $secondary-color;
+  padding: 2rem 0;
+
+  &__link {
+    color: $primary-color;
+  }
+}
+
+.breadcrumb {
+  text-align: center;
+  display: block;
+  color: #fff;
+  background-color: $primary-color;
+  margin-bottom: 3rem;
+  li {
+    display: inline;
+    color: $secondary-color;
+    &::after{
+      content: " / ";
+      display: inline;
+    }
+  }
+  &__link {
+    color: $secondary-color;
+  }
+}

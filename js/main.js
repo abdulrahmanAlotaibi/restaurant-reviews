@@ -81,7 +81,7 @@ initMap = () => {
     "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}",
     {
       mapboxToken:
-        "pk.eyJ1IjoiaWlsZW9uOTciLCJhIjoiY2s1NHlraG4xMGI4cTNqbDg1eGRoY2ZueSJ9.fHmmQeT-B6SDQnaAJ-qpDw",
+        "pk.eyJ1IjoiaWlsZW9uOTciLCJhIjoiY2s1NHl0cmZtMDU2NTNucG1qY2JyMDVzbCJ9.ywTJyTVJrqfKq9wY5RNvwg",
       maxZoom: 18,
       attribution:
         'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -171,11 +171,18 @@ createRestaurantHTML = restaurant => {
   const image = document.createElement("img");
   image.className = "restaurant-img";
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  
+  // Adding alt attribute to the picture
+  image.alt = restaurant.name;
+  
   li.append(image);
 
   const name = document.createElement("h1");
   name.innerHTML = restaurant.name;
   li.append(name);
+  
+  // Adding title attribute
+  li.title = "View Details"
 
   const neighborhood = document.createElement("p");
   neighborhood.innerHTML = restaurant.neighborhood;

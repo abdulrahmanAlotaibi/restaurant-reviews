@@ -5,10 +5,13 @@
   padding: 30px 15px 60px;
   text-align: center;
   display: grid;
-  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 3rem;;
+  //width: 100%;
+  grid-auto-flow: row;
   & > * {
-    width: 30%;
-    flex-wrap: wrap;
+     width: 90%;
   }
   li {
     background-color: #fff;
@@ -17,11 +20,41 @@
     min-height: 30rem;
     padding:  30px 25px;
     text-align: left;
+    border-radius: 1rem;
+    transition: box-shadow .3s ease-in-out;
+    text-align: center;
+
+    &:hover {
+      box-shadow: 0.5rem 0.7rem 2rem rgba($primary-color-light, 0.5);
+    }
+  
+    a {
+      border-radius: 50rem;
+      padding: 1.2rem 2rem;
+      background-color: $primary-color;
+      color: $secondary-color;
+      margin-top: 3rem;
+      display: inline-block;
+    }
+
+    
   }
 
   .restaurant-img {
     background-color: #ccc;
     display: block;
     width: 100%;
+    margin-bottom: 3rem;
+  }
+
+
+
+   @include respond(laptop-m){
+     grid-template-columns: 1fr 1fr;
+   }
+   @include respond(laptop){
+    grid-template-columns: 1fr ;
+    grid-gap: 10vh 0;
+    justify-items: center;
   }
 }
