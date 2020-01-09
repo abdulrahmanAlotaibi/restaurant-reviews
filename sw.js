@@ -1,3 +1,4 @@
+// checking the support of server Worker and registering it.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker.register("/sw.js").then(
@@ -53,7 +54,7 @@ self.addEventListener("activate", function(event) {
         cacheNames
           .filter(function(cacheName) {
             return (
-              cacheName.startsWith("project") && cacheName != staticCacheName
+              cacheName.startsWith("project-") && cacheName != staticCacheName
             );
           })
           .map(function(cacheName) {
